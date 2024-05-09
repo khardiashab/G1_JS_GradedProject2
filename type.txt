@@ -1,0 +1,22 @@
+
+
+How to achieve the goal
+
+    1 . On loading we have to some preparation 
+        - add creadientials to local storage 
+        - add isloggedin to local storage  value = flase
+        - redirect to /HTML/login.HTML
+
+    2. Now handling the login click
+        - 1st create send alert if username/password is empty
+        - checkcredientials 
+        - if  true{
+            - set isloggedin = true,
+            - redirect to resume.html
+            - create MainData object
+            - create Resume object
+            - display Resume object
+            
+            // Handling Search , Next, Previous event
+            
+        }

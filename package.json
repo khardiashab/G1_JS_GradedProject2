@@ -1,0 +1,22 @@
+{
+  "name": "g1_js_gradedproject2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type" : "module",
+  "scripts": {
+    "start" : "http-server --prot 3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khardiashab/G1_JS_GradedProject2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khardiashab/G1_JS_GradedProject2/issues"
+  },
+  "homepage": "https://github.com/khardiashab/G1_JS_GradedProject2#readme"
+}
