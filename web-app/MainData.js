@@ -1,63 +1,57 @@
 class MainData {
-    /**
-     *  Properties : 
-     *   1. MainData
-     *   2. currentIndex
-     *   3. lenghtOfResumeList
-     * 
-     *  Methods :
-     *      getCurrentResume();
-     *      isFirstResume();
-     *      isLastResume();
-     *      changeNextResume();
-     *      changePreviousResume();
-     *      searchResume();
-     * 
-     */
+  /**
+   *  Properties :
+   *   1. MainData
+   *   2. currentIndex
+   *   3. lenghtOfResumeList
+   *
+   *  Methods :
+   *      getCurrentResume();
+   *      isFirstResume();
+   *      isLastResume();
+   *      changeNextResume();
+   *      changePreviousResume();
+   *      searchResume();
+   *
+   */
 
-    constructor(data) {
-        this.mainData = data.resume;
-        this.currentIndex = 1;
-        this.lenghtOfResumeList = this.mainData.length;
-    }
+  constructor(data) {
+    this.mainData = data;
+    this.currentIndex = 0;
+    this.lenghtOfResumeList = this.mainData.length;
+  }
 
-    getCurrentResume() {
-        return this.mainData[this.currentIndex];
-    }
+  getCurrentResume() {
+    return this.mainData[this.currentIndex];
+  }
 
-    isFirstResume() {
-        return this.currentIndex == 1 ? true : false;
-    }
+  isEmpty() {
+    if (this.mainData.length == 0) {
+      return true;
+    } else false;
+  }
 
-    isLastResume() {
-        return this.currentIndex == this.lenghtOfResumeList;
-    }
+  isFirstResume() {
+    return this.currentIndex == 0 ? true : false;
+  }
 
-    changeNextResume() {
-        if (this.isLastResume()) {
-            this.currentIndex++;
-        }
-    }
+  isLastResume() {
+    return this.currentIndex == this.lenghtOfResumeList - 1;
+  }
 
-    changePreviousResume() {
-        if (this.isFirstResume()) {
-            this.currentIndex--;
-        }
-    }
+  changeNextResume() {
+    this.currentIndex++;
+  }
 
-    searchResume(str) {
-        for (let i = 0; i < this.lenghtOfResumeList; i++) {
-            if (this.mainData[i].appliedFor.includes(str)) {
-                return this.mainData[i];
-            }
-        }
-        return false;
-    }
+  changePreviousResume() {
+    this.currentIndex--;
+  }
 
-
-
-
-
+  searchResume(str) {
+    return this.mainData.filter((resume) => {
+      return resume.basics.AppliedFor.toLowerCase().includes(str.toLowerCase());
+    });
+  }
 }
 
 export { MainData };

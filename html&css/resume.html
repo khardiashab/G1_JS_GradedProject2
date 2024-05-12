@@ -5,16 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Your Resume</title>
+    <title>Resume</title>
 </head>
 
 <body>
     <div class="container">
-        <form action="" class="search_form">
-            <button>prev</button>
-            <input type="search" name="Resume" id="" placeholder="Resume">
-            <button>next</button>
-        </form>
+        <div class="search_form">
+            <button id="previous_button">prev</button>
+            <input type="search" name="Resume" id="search_resume" placeholder="Resume">
+            <button id="next_button">next</button>
+        </div>
+        <div class="error_box hidden">
+            <img src="../images/frown.png" alt="error ">
+            <p>No such result found.</p>
+        </div>
         <div class="resume_container">
             <div class="top_container">
                 <div class="name_section">
@@ -26,14 +30,14 @@
 
 
                 <div class="left_panel">
+                    <h4>Personal Information </h4>
                     <div class="personal_info">
-                        <h4>Personal Information </h4>
                     </div>
+                    <h4>Technical Skills</h4>
                     <div class="technical_skills">
-                        <h4>Technical Skills</h4>
                     </div>
+                    <h4>Hobbies</h4>
                     <div class="hobbies">
-                        <h4>Hobbies</h4>
                     </div>
                 </div>
 
@@ -41,29 +45,29 @@
 
 
                 <div class="main_panel">
+                    <h3>Work Experience in Previous Company</h3>
                     <div class="work">
-                        <h3>Work Experience in Previous Company</h3>
                     </div>
+                    <h3>Projects</h3>
                     <div class="project">
-                        <h3>Projects</h3>
                     </div>
+                    <h3>Education</h3>
                     <div class="education">
-                        <h3>Education</h3>
                     </div>
+                    <h3>Internship</h3>
                     <div class="internship">
-                        <h3>Internship</h3>
                     </div>
+                    <h3>Achievements</h3>
                     <div class="achievement">
-                        <h3>Achievements</h3>
                     </div>
                 </div>
 
-                
+
             </div>
         </div>
     </div>
 
-    <script type="module" src="../index.js"></script>
+    <script type="module" src="../web-app/resume-script.js"></script>
 </body>
 
 </html>
